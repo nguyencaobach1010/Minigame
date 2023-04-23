@@ -1,23 +1,18 @@
+<%@ page import="org.w3c.dom.ls.LSOutput" %>
+<%@ page import="model.Player" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html>
 <body>
 <header>
     <h1>Guess My Number!</h1>
-    <p class="between">(Between 1 and 1000)</p>
-    <button class="btn again">Again!</button>
-    <div class="number">?</div>
 </header>
-<main>
-    <section class="left">
-        <input type="number" class="guess" />
-        <button class="btn check">Check!</button>
-    </section>
-    <section class="right">
-        <p class="message">Start guessing...</p>
-        <p class="label-score"> Score: <span class="score">20</span></p>
-        <p class="label-highscore">
-             Highscore: <span class="highscore">0</span>
-        </p>
-    </section>
+<% String contextPath = request.getContextPath(); %>
+<form action="<%=contextPath%>/random">
+    <button type="submit" class="btn btn-primary">Bắt đầu chơi</button>
+</form>
 </main>
 <script src="script.js"></script>
 </body>

@@ -3,7 +3,7 @@ package model;
 public class Player {
     private String name;
     private int guessNumber;
-    private int rank;
+    private int numOfGuess;
 
     public String getName() {
         return name;
@@ -21,11 +21,11 @@ public class Player {
         this.guessNumber = guessNumber;
     }
 
-    public int getRank() {
-        return rank;
+    public int getNumOfGuess() {
+        return numOfGuess;
     }
 
-    public void setRank(int rank) {
-        this.rank = rank;
+    public void setNumOfGuess(int numOfGuess) {
+        this.numOfGuess = numOfGuess;
     }
 }
