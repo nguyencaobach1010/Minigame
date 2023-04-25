@@ -1,31 +1,23 @@
 package model;
 
-public class Player {
-    private String name;
-    private int guessNumber;
-    private int numOfGuess;
+import java.time.LocalDateTime;
 
-    public String getName() {
-        return name;
+public class Player implements Comparable<Player> {
+    private int guessCount;
+
+    public int getGuessCount() {
+        return guessCount;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setGuessCount(int guessCount) {
+        this.guessCount = guessCount;
     }
+    @Override
+    public int compareTo(Player o) {
+        int compareQuantity = ((Player) o).getGuessCount();
 
-    public int getGuessNumber() {
-        return guessNumber;
-    }
+        //ascending order
+        return this.guessCount - compareQuantity;
 
-    public void setGuessNumber(int guessNumber) {
-        this.guessNumber = guessNumber;
-    }
-
-    public int getNumOfGuess() {
-        return numOfGuess;
-    }
-
-    public void setNumOfGuess(int numOfGuess) {
-        this.numOfGuess = numOfGuess;
     }
 }
